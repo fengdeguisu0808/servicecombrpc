@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>servicecomb-rpc</artifactId>
+        <groupId>com.fanzhou</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>rpc-consumer</artifactId>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+    </properties>
+
+    <dependencies>
+        <!-- hibernate 校验规则 -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator</artifactId>
+        </dependency>
+        <!--springboot 启动项-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+        <!--微服务-->
+        <dependency>
+            <groupId>org.apache.servicecomb</groupId>
+            <artifactId>spring-boot-starter-provider</artifactId>
+        </dependency>
+        <!--RPC 通信模型 支持RPC开发模型-->
+        <dependency>
+            <groupId>org.apache.servicecomb</groupId>
+            <artifactId>transport-highway</artifactId>
+        </dependency>
+        <!--RPC 编程模型 提供RPC开发模型-->
+        <dependency>
+            <groupId>org.apache.servicecomb</groupId>
+            <artifactId>provider-pojo</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fanzhou</groupId>
+            <artifactId>servicecomb-interface</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+    </dependencies>
+
+</project>
