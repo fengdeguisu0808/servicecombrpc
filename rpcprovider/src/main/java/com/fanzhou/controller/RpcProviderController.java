@@ -21,6 +21,7 @@ public class RpcProviderController {
 
     @GetMapping(path = "/hello")
     public String sayRpc(String name){
-       return rpcService.sayRpc(name);
+        System.out.println("服务提供者9092-9082");
+        return rpcService.sayRpc(name);
     }
 }

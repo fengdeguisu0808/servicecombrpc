@@ -21,7 +21,7 @@ public class RpcConsumerController {
     private RpcService rpcService;
 
     @GetMapping(path = "/helloWorld")
-    public String sayRpc(){
-        return rpcService.sayRpc("xiao fanzhou");
+    public String sayRpc(String name){
+        return rpcService.sayRpc(name);
     }
 }

@@ -7,7 +7,7 @@ servicecomb:
     chain:
       Provider: {}
   highway:
-    address: 0.0.0.0:9081
+    address: 0.0.0.0:9085
   service:
     registry:
       address: http://127.0.0.1:30100

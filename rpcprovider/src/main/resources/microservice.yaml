@@ -5,11 +5,26 @@ service_description:
   properties:
     allowCrossApp: true
 servicecomb:
+  circuitBreaker:  #限流
+    Provider:
+      rpc-provider:
+        requestVolumeThreshold: 8
+  fallbackpolicy:
+    provider:
+      policy: returnnull
+  flowcontrol:
+    Provider:
+      qps:
+        limit:
+          gateway: 1
   handler:
     chain:
-      Provider: {}
+      Provider:
+        default: qps-flowcontrol-provider,bizkeeper-provider #处理器
   highway:
-    address: 0.0.0.0:9080
+    address: 0.0.0.0:9092
+  rest:
+    address: 0.0.0.0:9082
   service:
     registry:
       address: http://127.0.0.1:30100
